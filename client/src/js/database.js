@@ -16,8 +16,8 @@ const initdb = async () =>
 export const putDb = async (content) => {
   console.log("test");
   const appDB = await openDB('jate', 1);
-  const transaction = appDB.transaction('jate', 'readwrite');
-  const store = transaction.objectStore('jate');
+  const tx = appDB.transaction('jate', 'readwrite');
+  const store = tx.objectStore('jate');
   const request = store.put({ id: 1, value: content });
   const confirmation = await request;
   console.log("saved to database", confirmation);
@@ -26,12 +26,12 @@ export const putDb = async (content) => {
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   const appDB = await openDB('jate', 1);
-  const transaction = appDB.transaction('jate', 'readonly');
-  const store = transaction.objectStore('jate');
-  const request = store.getAll();
+  const tx = appDB.transaction('jate', 'readonly');
+  const store = tx.objectStore('jate');
+  const request = store.get(1);
   const confirmation = await request;
   console.log("data retrieved from database", confirmation);
-  return confirmation.value;
+  return confirmation?.value;
 }
 
 

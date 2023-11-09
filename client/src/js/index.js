@@ -31,3 +31,13 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
+
+// if ('serviceWorker' in navigator) {
+//   navigator.serviceWorker.register('/src-sw.js')
+//   .then(function(registration) {
+//     console.log('Service Worker registered with scope:', registration.scope);
+//   })
+//   .catch(function(error) {
+//     console.log('Service Worker registration failed:', error);
+//   });
+// }
