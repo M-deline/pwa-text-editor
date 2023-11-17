@@ -25,19 +25,19 @@ if (typeof editor === 'undefined') {
 
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
-  // register workbox service worker
-  const workboxSW = new Workbox('/src-sw.js');
+  // Register workbox service worker
+  const workboxSW = new Workbox('./src-sw.js');
   workboxSW.register();
 } else {
   console.error('Service workers are not supported in this browser.');
 }
 
 // if ('serviceWorker' in navigator) {
-//   navigator.serviceWorker.register('/src-sw.js')
-//   .then(function(registration) {
-//     console.log('Service Worker registered with scope:', registration.scope);
-//   })
-//   .catch(function(error) {
-//     console.log('Service Worker registration failed:', error);
+//   window.addEventListener('load', function() {
+//     navigator.serviceWorker.register('src-sw.js').then(function(registration) {
+//       console.log('ServiceWorker registration successful with scope: ', registration.scope);
+//     }, function(err) {
+//       console.log('ServiceWorker registration failed: ', err);
+//     });
 //   });
 // }

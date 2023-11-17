@@ -26,11 +26,31 @@ warmStrategyCache({
 });
 
 // TODO: Implement asset caching
+// registerRoute(
+//   ({ request }) => {
+//     if (typeof request.destination !== 'string') {
+//       console.error('request.destination is not a string:', request.destination);
+//       return false;
+//     }
+//     return ["style", "script", "worker"].includes(request.destination);
+//   },
+//   new StaleWhileRevalidate({
+//     cacheName: "asset-cache",
+//     plugins: [
+//       new CacheableResponsePlugin({
+//         statuses: [0, 200],
+//       }),
+//     ],
+//   })
+// );
 registerRoute(
-  ({ request }) => ["style", "script", "worker"].includes(request.destination),
+  // Here we define the callback function that will filter the requests we want to cache (in this case, JS and CSS files)
+  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
   new StaleWhileRevalidate({
-    cacheName: "asset-cache",
+    // Name of the cache storage.
+    cacheName: 'asset-cache',
     plugins: [
+      // This plugin will cache responses with these headers to a maximum-age of 30 days
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),

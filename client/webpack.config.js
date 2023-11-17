@@ -1,3 +1,4 @@
+const { Compilation } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
@@ -68,11 +69,11 @@ module.exports = () => {
               presets: ["@babel/preset-env"],
               plugins: [
                 "@babel/plugin-proposal-object-rest-spread",
-                "@babel/transform-runtime",]
-            },
+                "@babel/transform-runtime"]},
           },
-        }
+        },
       ],
     },
+
   };
 };
