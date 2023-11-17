@@ -24,6 +24,7 @@
     "if-env": "^1.0.4",
     "indexdb": "^0.0.0",
     "recipes": "^1.0.0",
+    "webpack-pwa-manifest": "^4.3.0",
     "work-box": "^0.2.4",
     "workbox": "^0.0.0"
   },
