@@ -5,6 +5,9 @@
     "build": "webpack --mode production",
     "start": "webpack --watch"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "author": "2U",
   "license": "UNLICENSED",
   "devDependencies": {
