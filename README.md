@@ -1,27 +1,33 @@
-# pwa-text-editor
+# J.A.T.E - Just Another Text Editor
+## Click [here](herkoku) for the link to this website on Heroku
+## Overview & Description 
+- The purpose of this challenge was to learn about service workers and progressive web applications. In this challenge, I learned how to use service workers and how to write code so that the user is able to install it for later use.
+- In this challenge there was provided code for the app, so I wrote the code for some of the `src-sw.js` file and the `webpack.config.js` file. I also had to edit the `server.js` file and the `package.json` file.
+## Challenges & Successes
+- A challenge I encountered was editing the package.json. I kept receiving errors and it wasn't until I realized that heroku didn't accept the newest node so I had to specify the node version in the package.json which took me a while to figure out.
+- Another challenge that took me a long time to realize was actually very simple. In my server file, I had 
+`require('./routes/htmlRoutes')(app);`
+but I was getting an error that I could not find the solution to anywhere. I fixed it by checking the Mini Project from Module 19 that we did in class and I realized that in that app's server file we had written 
+`require('./routes/htmlRoutes.js')(app);`
+and once I fixed that in this app's file, it worked as intended. 
 
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Heroku
-THEN I should have proper build scripts for a webpack application
+- This challenge was successful to me because I learned a lot about service workers.
+- This app is able to be installed which is another success and the user is able to delete or edit the text if they want to.
+## Technologies and Features
+- Node.js
+- Express.js
+- Service Workers
+- JavaScript 
+- HTML
+- CSS
+- Webpack
+## How to Use and Install
+- Do a git clone of this repo and then open it in your desired code editor.
+- Open the integrated terminal and run `npm install` to install all the dependencies.
+- In the server file, open it in the integrated terminal and do the following commands
+    + `npm run build`
+    + `npm run start:dev`
+- Open your browser and go to `localhost:3001` to see the application where you can write whatever you need to and you can install it as well to use in your free time or if you have no internet access.
+## Credits
+- University of BootCamp Instructor Da K. and TAs George and Kirtley
+- Previous Modules from University of BootCamp (specifically Module 19 the mini project) 
