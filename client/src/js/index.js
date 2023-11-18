@@ -24,13 +24,14 @@ if (typeof editor === 'undefined') {
 }
 
 // Check if service workers are supported
-// if ('serviceWorker' in navigator) {
-//   // Register workbox service worker
-//   const workboxSW = new Workbox('./src-sw.js');
-//   workboxSW.register();
-// } else {
-//   console.error('Service workers are not supported in this browser.');
-// }
+if ('serviceWorker' in navigator) {
+  // Register workbox service worker
+  const workboxSW = new Workbox('./src-sw.js');
+  console.log('workboxSW listening', workboxSW);
+  workboxSW.register();
+} else {
+  console.error('Service workers are not supported in this browser.');
+}
 
 // if ('serviceWorker' in navigator) {
 //   window.addEventListener('load', function() {
@@ -41,12 +42,14 @@ if (typeof editor === 'undefined') {
 //     });
 //   });
 // }
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/src-sw.js').then(function(registration) {
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
+
+//this one was uncommented
+// if ('serviceWorker' in navigator) {
+//   window.addEventListener('load', function() {
+//     navigator.serviceWorker.register('/src-sw.js').then(function(registration) {
+//       console.log('ServiceWorker registration successful with scope: ', registration.scope);
+//     }, function(err) {
+//       console.log('ServiceWorker registration failed: ', err);
+//     });
+//   });
+// }

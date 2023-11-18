@@ -28,6 +28,7 @@ warmStrategyCache({
 // TODO: Implement asset caching
 // registerRoute(
 //   ({ request }) => {
+//     console.log('listening register route');
 //     if (typeof request.destination !== 'string') {
 //       console.error('request.destination is not a string:', request.destination);
 //       return false;
@@ -43,20 +44,34 @@ warmStrategyCache({
 //     ],
 //   })
 // );
+
 registerRoute(
-  // Here we define the callback function that will filter the requests we want to cache (in this case, JS and CSS files)
-  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+  ({ request }) => request.destination === 'style' || request.destination === 'script' || request.destination === 'worker',
   new StaleWhileRevalidate({
-    // Name of the cache storage.
-    cacheName: 'asset-cache',
+    cacheName: "asset-cache",
     plugins: [
-      // This plugin will cache responses with these headers to a maximum-age of 30 days
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
     ],
   })
-);
+)
+
+// this one was uncommented below  
+//registerRoute(
+//   // Here we define the callback function that will filter the requests we want to cache (in this case, JS and CSS files)
+//   ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+//   new StaleWhileRevalidate({
+//     // Name of the cache storage.
+//     cacheName: 'asset-cache',
+//     plugins: [
+//       // This plugin will cache responses with these headers to a maximum-age of 30 days
+//       new CacheableResponsePlugin({
+//         statuses: [0, 200],
+//       }),
+//     ],
+//   })
+// );
 registerRoute();
 
 
@@ -66,7 +81,7 @@ const urlsToCache = [
   '/styles/main.css',
   '/script/main.js'
 ];
-
+//leave commented out 
 // self.addEventListener('install', function(event) {
 //   // Perform install steps
 //   event.waitUntil(
