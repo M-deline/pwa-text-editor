@@ -2,10 +2,10 @@
   "env": {
     "browser": true
   },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module" 
-    },
+  "parserOptions": {
+    "ecmaVersion": 2020, 
+    "sourceType": "module" 
+  },
   "rules": {
     // Override our default settings just for this directory
     "eqeqeq": "warn",
