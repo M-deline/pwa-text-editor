@@ -9,12 +9,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 require('./routes/htmlRoutes.js')(app);
 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 
-// app.get('/favicon.icon', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../client/dist/favicon.ico'));
-// });
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/dist/favicon.ico'));
+});
+
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
