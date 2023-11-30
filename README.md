@@ -31,7 +31,7 @@ and once I fixed that in this app's file, it worked as intended.
 - In the server file, open it in the integrated terminal and do the following commands
     + `npm run build`
     + `npm run start:dev`
-- Open your browser and go to `localhost:3001` to see the application where you can write whatever you need to and you can install it as well to use in your free time or if you have no internet access.
+- Open your browser and go to `localhost:3000` to see the application where you can write whatever you need to and you can install it as well to use in your free time or if you have no internet access.
 ## Credits
 - University of BootCamp Instructor Da K. and TAs George and Kirtley
 - Previous Modules from University of BootCamp (specifically Module 19 the mini project) 
