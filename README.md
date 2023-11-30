@@ -3,6 +3,10 @@
 ## Overview & Description 
 - The purpose of this challenge was to learn about service workers and progressive web applications. In this challenge, I learned how to use service workers and how to write code so that the user is able to install it for later use.
 - In this challenge there was provided code for the app, so I wrote the code for some of the `src-sw.js` file and the `webpack.config.js` file. I also had to edit the `server.js` file and the `package.json` file.
+## Screenshots
+- ![Screenshot of the installed app with edited text that reads 'this is the app installed!'](<./readme-images/Screenshot 2023-11-29 at 11.20.22 PM.png>)
+- ![Screenshot of the installed app with default text](<./readme-images/Screenshot 2023-11-29 at 11.20.01 PM.png>)
+- ![Screenshot of the app in the browser running with edited text that reads 'this is a text editor'](<./readme-images/Screenshot 2023-11-29 at 11.19.50 PM.png>)
 ## Challenges & Successes
 - A challenge I encountered was editing the package.json. I kept receiving errors and it wasn't until I realized that heroku didn't accept the newest node so I had to specify the node version in the package.json which took me a while to figure out.
 - Another challenge that took me a long time to realize was actually very simple. In my server file, I had 
