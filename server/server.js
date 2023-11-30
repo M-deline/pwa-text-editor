@@ -15,6 +15,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 
-app.get('/favicon.ico', (req, res) => {
+app.get('/favicon.icon', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist/favicon.ico'));
 });
