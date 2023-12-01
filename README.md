@@ -14,7 +14,7 @@
 but I was getting an error that I could not find the solution to anywhere. I fixed it by checking the Mini Project from Module 19 that we did in class and I realized that in that app's server file we had written 
 `require('./routes/htmlRoutes.js')(app);`
 and once I fixed that in this app's file, it worked as intended. 
-
+- Another challenge I ran into was with heroku deployment. 
 - This challenge was successful to me because I learned a lot about service workers.
 - This app is able to be installed which is another success and the user is able to delete or edit the text if they want to.
 ## Technologies and Features
