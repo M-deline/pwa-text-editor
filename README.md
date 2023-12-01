@@ -9,7 +9,7 @@
 - ![Screenshot of the app in the browser running with edited text that reads 'this is a text editor'](<./readme-images/Screenshot 2023-11-29 at 11.19.50 PM.png>)
 ## Challenges & Successes
 - A challenge I encountered was editing the package.json. I kept receiving errors and it wasn't until I realized that heroku didn't accept the newest node so I had to specify the node version in the package.json which took me a while to figure out.
-- Another challenge that took me a long time to realize was actually very simple. In my server file, I had 
+- Another challenge that took me a long time to realize was actually very simple. In my server file, I had no start file but the actual issue was that I had no web dynos. I could not figure out what was wrong for days and I kept messing around with the code until I found a command `heroku ps:scale web=1` which finally made the app have a web dyno. 
 `require('./routes/htmlRoutes')(app);`
 but I was getting an error that I could not find the solution to anywhere. I fixed it by checking the Mini Project from Module 19 that we did in class and I realized that in that app's server file we had written 
 `require('./routes/htmlRoutes.js')(app);`
@@ -33,6 +33,7 @@ and once I fixed that in this app's file, it worked as intended.
     + `npm run start:dev`
 - Open your browser and go to `localhost:3000` to see the application where you can write whatever you need to and you can install it as well to use in your free time or if you have no internet access.
 ## Credits
+- “Heroku Dynos - Scaling.” Heroku, www.heroku.com/dynos/scaling. Accessed 30 Nov. 2023. 
 - University of BootCamp Instructor Da K. and TAs George and Kirtley
 - Previous Modules from University of BootCamp (specifically Module 19 the mini project) 
 
