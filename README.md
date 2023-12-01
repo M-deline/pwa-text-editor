@@ -35,3 +35,4 @@ and once I fixed that in this app's file, it worked as intended.
 ## Credits
 - University of BootCamp Instructor Da K. and TAs George and Kirtley
 - Previous Modules from University of BootCamp (specifically Module 19 the mini project) 
+
