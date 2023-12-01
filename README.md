@@ -1,5 +1,5 @@
 # J.A.T.E - Just Another Text Editor
-## Click [here](herkoku) for the link to this website on Heroku
+## Click [here]( https://pwa-text-editorchal19-3e580cc54b44.herokuapp.com/) for the link to this website on Heroku
 ## Overview & Description 
 - The purpose of this challenge was to learn about service workers and progressive web applications. In this challenge, I learned how to use service workers and how to write code so that the user is able to install it for later use.
 - In this challenge there was provided code for the app, so I wrote the code for some of the `src-sw.js` file and the `webpack.config.js` file. I also had to edit the `server.js` file and the `package.json` file.

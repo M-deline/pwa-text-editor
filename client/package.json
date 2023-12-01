@@ -2,7 +2,7 @@
   "name": "JATE",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack --mode production",
+    "build": "node --trace-deprecation node_modules/webpack/bin/webpack.js --mode production",
     "start": "webpack --watch"
   },
   "engines": {
@@ -27,9 +27,9 @@
   },
   "dependencies": {
     "code-mirror-themes": "^1.0.0",
-    "idb": "^6.1.2",
+    "express": "^4.17.1",
     "html-webpack-plugin": "^5.3.2",
-    "workbox-webpack-plugin": "^6.2.4",
-    "express": "^4.17.1"
+    "idb": "^6.1.2",
+    "workbox-webpack-plugin": "^6.2.4"
   }
 }
